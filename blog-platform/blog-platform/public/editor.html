@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Blog - BlogSpace</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+  <main class="narrow">
+    <h1 id="page-title">Create a blog post</h1>
+    <p class="subtitle">Your post is published as soon as you save it.</p>
+    <div id="msg" class="message" hidden></div>
+    <form id="post-form" class="form-card" novalidate>
+      <label>Title
+        <input name="title" maxlength="120" required>
+      </label>
+      <label>Short description <span class="hint">Shown on the blog card (10-250 characters)</span>
+        <textarea name="description" maxlength="250" rows="2" required></textarea>
+      </label>
+      <label>Content
+        <textarea name="content" rows="12" required></textarea>
+      </label>
+      <button id="save-btn" class="btn" type="submit">Publish post</button>
+    </form>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/editor.js"></script>
+</body>
+</html>

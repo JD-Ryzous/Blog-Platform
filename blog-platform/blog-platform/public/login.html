@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - BlogSpace</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="navbar" class="navbar"></header>
+  <main class="narrow">
+    <div class="form-card">
+      <div class="tabs">
+        <button class="tab active" data-tab="login" type="button">Login</button>
+        <button class="tab" data-tab="register" type="button">Create account</button>
+      </div>
+      <div id="msg" class="message" hidden></div>
+      <form id="login-form">
+        <label>Email <input name="email" type="email" autocomplete="email" required></label>
+        <label>Password <input name="password" type="password" autocomplete="current-password" required></label>
+        <button class="btn" type="submit">Log in</button>
+      </form>
+      <form id="register-form" hidden>
+        <label>Name <input name="name" minlength="2" maxlength="50" autocomplete="name" required></label>
+        <label>Email <input name="email" type="email" autocomplete="email" required></label>
+        <label>Password <span class="hint">At least 6 characters</span>
+          <input name="password" type="password" minlength="6" autocomplete="new-password" required>
+        </label>
+        <button class="btn" type="submit">Create account</button>
+      </form>
+    </div>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
